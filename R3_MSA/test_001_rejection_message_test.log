@@ -1,0 +1,200 @@
+#[ DATA ]:
+
+task_prompt = (
+    "Write a short email informing a passionate job applicant that they are not selected, "
+    "while preserving their dignity, encouraging their growth, and leaving them with hope."
+)
+
+initial_task_content = (
+    "Thank you for applying. We regret to inform you that you were not selected. "
+    "We wish you the best in your future endeavors."
+)
+
+task_rules = [
+    "1. The message must not exceed 100 words.",
+    "2. It must include one sentence that acknowledges the applicant’s effort or passion.",
+    "3. It must avoid generic corporate clichés (e.g., 'We wish you the best').",
+    "4. Must contain a sentence that encourages them to continue pursuing their path.",
+    "5. Must avoid apologizing—this is about truth, not guilt.",
+    "6. It must strike a tone of quiet respect, not pity.",
+    "7. Must not mention who was selected or imply comparative ranking.",
+    "8. Must contain one unique metaphor related to journey, resilience, or growth.",
+    "9. Must end with a signature line that feels human, not corporate (e.g., no 'HR Team').",
+    "10. Every sentence must feel intentional—no fillers, no flattery."
+]
+
+
+#[ MODEL]:
+GPT-4.1-MINI
+
+
+
+#[ FLOW ]
+🚀🚀🚀 RUNNING R2-MSA PIPELINE 🚀🚀�
+
+
+============================================================
+NODE: 🔬 REVIEW (Cycle: 0)
+============================================================
+📄 Content under review:
+---
+Thank you for applying. We regret to inform you that you were not selected. We wish you the best in your future endeavors.
+---
+🧐 Evaluation Results:
+  ✅ PASSED - RULE [ #1 ]: The message must not exceed 100 words.
+         [REASON] : The message is concise and well under 100 words.
+  ❌ FAILED - RULE [ #2 ]: It must include one sentence that acknowledges the applicant’s effort or passion.
+         [REASON] : The message does not include any sentence acknowledging the applicant's effort or passion.
+  ❌ FAILED - RULE [ #3 ]: It must avoid generic corporate clichés (e.g., 'We wish you the best').
+         [REASON] : The phrase 'We wish you the best in your future endeavors' is a generic corporate cliché.
+  ❌ FAILED - RULE [ #4 ]: Must contain a sentence that encourages them to continue pursuing their path.
+         [REASON] : There is no sentence encouraging the applicant to continue pursuing their path.
+  ✅ PASSED - RULE [ #5 ]: Must avoid apologizing—this is about truth, not guilt.
+         [REASON] : The message does not contain any apologies.
+  ✅ PASSED - RULE [ #6 ]: It must strike a tone of quiet respect, not pity.
+         [REASON] : The tone is neutral and respectful without pity.
+  ✅ PASSED - RULE [ #7 ]: Must not mention who was selected or imply comparative ranking.
+         [REASON] : The message does not mention who was selected or imply any comparative ranking.
+  ❌ FAILED - RULE [ #8 ]: Must contain one unique metaphor related to journey, resilience, or growth.
+         [REASON] : There is no metaphor related to journey, resilience, or growth present in the message.
+  ❌ FAILED - RULE [ #9 ]: Must end with a signature line that feels human, not corporate (e.g., no 'HR Team').
+         [REASON] : The message lacks a signature line, human or otherwise.
+  ✅ PASSED - RULE [ #10 ]: Every sentence must feel intentional—no fillers, no flattery.
+         [REASON] : Each sentence is intentional and free of fillers or flattery.
+
+
+============================================================
+EDGE: 🤔 needs_refinement_edge
+============================================================
+DECISION: 👎 5 rule(s) failed. Proceeding to the 'refine' node.
+
+
+============================================================
+NODE: ✍️ REFINE (Cycle: 1)
+============================================================
+
+************************************************************
+✅ REFINED CONTENT GENERATED:
+************************************************************
+Thank you for sharing your passion and dedication through your application. While we won’t be moving forward together, your journey is like a seed planted—each experience nurturing growth toward new opportunities. Keep cultivating your path with the same enthusiasm, and you will find the right place to flourish. Wishing you strength and inspiration as you continue onward.
+
+Warmly,
+Alex
+************************************************************
+
+
+============================================================
+NODE: 🔬 REVIEW (Cycle: 1)
+============================================================
+📄 Content under review:
+---
+Thank you for sharing your passion and dedication through your application. While we won’t be moving forward together, your journey is like a seed planted—each experience nurturing growth toward new opportunities. Keep cultivating your path with the same enthusiasm, and you will find the right place to flourish. Wishing you strength and inspiration as you continue onward.
+
+Warmly,
+Alex
+---
+🧐 Evaluation Results:
+  ✅ PASSED - RULE [ #1 ]: The message must not exceed 100 words.
+         [REASON] : The content contains 74 words, which is under the 100-word limit.
+  ✅ PASSED - RULE [ #2 ]: It must include one sentence that acknowledges the applicant’s effort or passion.
+         [REASON] : The first sentence acknowledges the applicant's passion and dedication explicitly.
+  ✅ PASSED - RULE [ #3 ]: It must avoid generic corporate clichés (e.g., 'We wish you the best').
+         [REASON] : The message avoids generic corporate clichés and uses original, thoughtful language.
+  ✅ PASSED - RULE [ #4 ]: Must contain a sentence that encourages them to continue pursuing their path.
+         [REASON] : The sentence 'Keep cultivating your path with the same enthusiasm, and you will find the right place to flourish.' encourages the applicant to continue pursuing their path.
+  ✅ PASSED - RULE [ #5 ]: Must avoid apologizing—this is about truth, not guilt.
+         [REASON] : There is no apology in the message; it focuses on truth and encouragement without guilt.
+  ✅ PASSED - RULE [ #6 ]: It must strike a tone of quiet respect, not pity.
+         [REASON] : The tone is respectful and warm without pity, maintaining quiet respect throughout.
+  ✅ PASSED - RULE [ #7 ]: Must not mention who was selected or imply comparative ranking.
+         [REASON] : The content does not mention who was selected or imply any comparative ranking.
+  ✅ PASSED - RULE [ #8 ]: Must contain one unique metaphor related to journey, resilience, or growth.
+         [REASON] : The metaphor 'your journey is like a seed planted—each experience nurturing growth toward new opportunities' is unique and related to growth and journey.
+  ✅ PASSED - RULE [ #9 ]: Must end with a signature line that feels human, not corporate (e.g., no 'HR Team').
+         [REASON] : The signature 'Warmly, Alex' is personal and human, not corporate.
+  ✅ PASSED - RULE [ #10 ]: Every sentence must feel intentional—no fillers, no flattery.
+         [REASON] : Each sentence is purposeful, with no fillers or unnecessary flattery; the message is concise and intentional.
+
+
+============================================================
+EDGE: 🤔 needs_refinement_edge
+============================================================
+DECISION: 👍 All rules passed. Proceeding to final summary.
+
+
+============================================================
+NODE: 🏁 FINAL SUMMARY
+============================================================
+Finish Reason: refined_until_all_rules_passed
+Final metadata prepared.
+
+
+------------------------------------------------------------
+### FINAL METADATA ###
+------------------------------------------------------------
+
+{
+  "original_content": "Thank you for applying. We regret to inform you that you were not selected. We wish you the best in your future endeavors.",
+  "final_content": "Thank you for sharing your passion and dedication through your application. While we won\u2019t be moving forward together, your journey is like a seed planted\u2014each experience nurturing growth toward new opportunities. Keep cultivating your path with the same enthusiasm, and you will find the right place to flourish. Wishing you strength and inspiration as you continue onward.\n\nWarmly,\nAlex",
+  "refinement_versions": [
+    "Thank you for applying. We regret to inform you that you were not selected. We wish you the best in your future endeavors.",
+    "Thank you for sharing your passion and dedication through your application. While we won\u2019t be moving forward together, your journey is like a seed planted\u2014each experience nurturing growth toward new opportunities. Keep cultivating your path with the same enthusiasm, and you will find the right place to flourish. Wishing you strength and inspiration as you continue onward.\n\nWarmly,\nAlex"
+  ],
+  "passed_rules_with_justifications": [
+    {
+      "rule_id": 1,
+      "description": "The message must not exceed 100 words.",
+      "justification": "The content contains 74 words, which is under the 100-word limit."
+    },
+    {
+      "rule_id": 2,
+      "description": "It must include one sentence that acknowledges the applicant\u2019s effort or passion.",
+      "justification": "The first sentence acknowledges the applicant's passion and dedication explicitly."
+    },
+    {
+      "rule_id": 3,
+      "description": "It must avoid generic corporate clich\u00e9s (e.g., 'We wish you the best').",
+      "justification": "The message avoids generic corporate clich\u00e9s and uses original, thoughtful language."
+    },
+    {
+      "rule_id": 4,
+      "description": "Must contain a sentence that encourages them to continue pursuing their path.",
+      "justification": "The sentence 'Keep cultivating your path with the same enthusiasm, and you will find the right place to flourish.' encourages the applicant to continue pursuing their path."
+    },
+    {
+      "rule_id": 5,
+      "description": "Must avoid apologizing\u2014this is about truth, not guilt.",
+      "justification": "There is no apology in the message; it focuses on truth and encouragement without guilt."
+    },
+    {
+      "rule_id": 6,
+      "description": "It must strike a tone of quiet respect, not pity.",
+      "justification": "The tone is respectful and warm without pity, maintaining quiet respect throughout."
+    },
+    {
+      "rule_id": 7,
+      "description": "Must not mention who was selected or imply comparative ranking.",
+      "justification": "The content does not mention who was selected or imply any comparative ranking."
+    },
+    {
+      "rule_id": 8,
+      "description": "Must contain one unique metaphor related to journey, resilience, or growth.",
+      "justification": "The metaphor 'your journey is like a seed planted\u2014each experience nurturing growth toward new opportunities' is unique and related to growth and journey."
+    },
+    {
+      "rule_id": 9,
+      "description": "Must end with a signature line that feels human, not corporate (e.g., no 'HR Team').",
+      "justification": "The signature 'Warmly, Alex' is personal and human, not corporate."
+    },
+    {
+      "rule_id": 10,
+      "description": "Every sentence must feel intentional\u2014no fillers, no flattery.",
+      "justification": "Each sentence is purposeful, with no fillers or unnecessary flattery; the message is concise and intentional."
+    }
+  ],
+  "failed_rules_with_justifications": [],
+  "finish_reason": "refined_until_all_rules_passed",
+  "total_refinements": 1,
+  "max_refinements_allowed": 5,
+  "total_api_calls": 3
+}
