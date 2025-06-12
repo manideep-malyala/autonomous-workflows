@@ -18,7 +18,7 @@
 
 ---
 
-###  Project Definitions
+## Project Details
 
 - **R³ MSA** – Review, Refine, Report – Multi-Step Agent  
 - **Agent P.R.I.M.E** – Prompt Refinement through Insightful Metrics and Evaluation
